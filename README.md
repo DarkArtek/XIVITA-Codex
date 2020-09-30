@@ -25,7 +25,7 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 #### Come posso abilitare le notifiche quando un mio buff / dot sta per scadere?
 > Nel menù delle impostazioni, mettere la spunta su: Lampeggia quando i Dot stanno scadendo.
 #### Come mai non mi compaiono i Buff??
-> Assicurati di aggiungere un nuono overlay che punti al seguente indirizzo: `https://ffxivita.it/codex/buffs.html` . Se ancora non funziona, apri una [Nuova Segnalazione](https//github.com/DarkArtek/Codex/issues/new)
+> Assicurati di aggiungere un nuono overlay che punti al seguente indirizzo: `https://ffxivita.it/codex/buffs.html` . Se ancora non funziona, apri una [Nuova Segnalazione](https://github.com/DarkArtek/Codex/issues/new)
 #### Come mai esce fuori "SBLOCCATO (BLOCCARE PRIMA DI USARE)" ?
 > Controlla di aver bloccato l'overlay dentro ACT ([vedi immagine](https://github.com/quisquous/cactbot/raw/main/screenshots/overlay_plugin_new_raidboss_locked.png))
 #### Come vedo i buff dei membri del party?
