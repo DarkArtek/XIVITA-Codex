@@ -8,7 +8,7 @@ Gauges extra e tracker di Buff per FFXIV
 4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://darkartek.github.io/Codex/buffs.html`
 
 ### Installazione per Streamers
-1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://darkartek.github.io/Codex/index.html?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://ffxivita.it/codex/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
+1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://darkartek.github.io/Codex/index.html?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://darkartek.github.io/Codex/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
 
 ### Le Gauges
 Mostra diverse informazioni. Ad esempio quanto tempo rimane al vostro DoT (Biolysis, Dia, etc.) o quanti GCD avete (Inner Release, Perfect Balance, etc.)
