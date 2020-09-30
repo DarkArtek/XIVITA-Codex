@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/config/config.css"/>
+    </head>
+    <body>
+        <div id="settings-panel">
+            <div id="settings-header">
+                <span id="settings-title">IMPOSTAZIONI</span>
+                <span id="settings-help" class="btn"><a href="https://github.com/DarkArtek/Codex/issues/new" target="_blank">SEGNALA BUG</a></span>
+                <span id="settings-apply" class="btn">SALVA</span>
+            </div>
+            <div id="settings-body">
+                <div class="settings-collapse"><span class="settings-collapse-button" id="job-gauges-collapse">+</span><span>JOB GAUGES</span></div>
+                <div id="gauge-settings" class="settings-category">
+                    <div class="settings-row rows">
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Bordi</span>
+                            <select id="codex-edges">
+                                <option value="round" selected>Arrotondati</option>
+                                <option value="corners">Corners</option>
+                                <option value="silver">Argentati</option>
+                            </select>
+                        </div>
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Zoom</span>
+                            <input id="codex-zoom"/>
+                        </div>
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Dimensione Font</span>
+                            <input id="codex-fontsize"/>
+                        </div>
+                    </div>
+
+                    <div class="settings-row rows">
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Resta visibile dopo scadenza Buff (in millisecondi)</span>
+                            <input id="codex-timeout"/>
+                        </div>
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Refresh Timer (in millisecondi)</span>
+                            <input id="codex-refresh"/>
+                        </div>
+                        <div class="settings-row-2 row">
+                            <span class="row-title">Lampeggia quando i DOT stanno scadendo</span>
+                            <input id="codex-danger" type="checkbox"/>
+                        </div>
+                    </div>
+
+                    <div class="settings-row row">
+                        <span class="row-title">Jobs</span>
+                    </div>
+                </div>
+
+                <div class="settings-collapse"><span class="settings-collapse-button" id="buffs-collapse">+</span><span>BUFF del Party</span></div>
+                <div id="buffs-settings" class="settings-category">
+                    <div class="settings-row row">
+                        <span class="row-title">Mostra sempre Buff personali (abilitato in automatico per AST)</span>
+                        <input id="codex-force-ast" type="checkbox"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/general/ids.js"></script>
+    <script src="js/gauges/actions.js"></script>
+    <script src="js/buffs/buffs.js"></script>
+
+    <script src="js/config/config-default.js"></script>
+    <script src="js/config/config-settings.js"></script>
+</html>
