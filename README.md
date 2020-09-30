@@ -4,11 +4,11 @@ Gauges extra e tracker di Buff per FFXIV
 ### Installazione
 1. ACT & Plugin per FFXIV
 2. [OverlayPlugin di NGLD](https://github.com/quisquous/cactbot#install-ngld-overlayplugin)
-3. Per le gauges, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://ffxivita.it/codex/index.html`
-4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://ffxivita.it/codex/buffs.html`
+3. Per le gauges, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://darkartek.github.io/Codex/index.html`
+4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://darkartek.github.io/Codex/buffs.html`
 
 ### Installazione per Streamers
-1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://ffxivita.it/codex/index.html?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://ffxivita.it/codex/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
+1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://darkartek.github.io/Codex/index.html?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://ffxivita.it/codex/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
 
 ### Le Gauges
 Mostra diverse informazioni. Ad esempio quanto tempo rimane al vostro DoT (Biolysis, Dia, etc.) o quanti GCD avete (Inner Release, Perfect Balance, etc.)
@@ -25,7 +25,7 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 #### Come posso abilitare le notifiche quando un mio buff / dot sta per scadere?
 > Nel menù delle impostazioni, mettere la spunta su: Lampeggia quando i Dot stanno scadendo.
 #### Come mai non mi compaiono i Buff??
-> Assicurati di aggiungere un nuono overlay che punti al seguente indirizzo: `https://ffxivita.it/codex/buffs.html` . Se ancora non funziona, apri una [Nuova Segnalazione](https://github.com/DarkArtek/Codex/issues/new)
+> Assicurati di aggiungere un nuono overlay che punti al seguente indirizzo: `https://darkartek.github.io/Codex/buffs.html` . Se ancora non funziona, apri una [Nuova Segnalazione](https://github.com/DarkArtek/Codex/issues/new)
 #### Come mai esce fuori "SBLOCCATO (BLOCCARE PRIMA DI USARE)" ?
 > Controlla di aver bloccato l'overlay dentro ACT ([vedi immagine](https://github.com/quisquous/cactbot/raw/main/screenshots/overlay_plugin_new_raidboss_locked.png))
 #### Come vedo i buff dei membri del party?
