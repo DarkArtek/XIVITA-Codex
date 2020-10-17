@@ -10,7 +10,11 @@ var config = {
     color: {},
     order: {},
     danger: false,
+    glow: true,
+    glows: {},
     // BUFFS
-    force_ast: false,
+    all_personals: true,
+    own_personals: true,
     buffs_disabled: {},
+
 };
