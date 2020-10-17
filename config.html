@@ -18,7 +18,7 @@
                             <span class="row-title">Bordi</span>
                             <select id="codex-edges">
                                 <option value="round" selected>Arrotondati</option>
-                                <option value="corners">Corners</option>
+                                <option value="corners">Normali</option>
                                 <option value="silver">Argentati</option>
                             </select>
                         </div>
@@ -32,17 +32,17 @@
                         </div>
                     </div>
 
-                     <div class="settings-row rows">
+                    <div class="settings-row rows">
                         <div class="settings-row-2 row">
-                            <span class="row-title">Visibilit&agrave; dopo Fine Buff (millisecondi)</span>
+                            <span class="row-title">Visibile dopo fine buff (millisecondi)</span>
                             <input id="codex-timeout"/>
                         </div>
                         <div class="settings-row-2 row">
-                            <span class="row-title">Refresh Timer (millisecondi)</span>
+                            <span class="row-title">Refresh del Timer (millisecondi)</span>
                             <input id="codex-refresh"/>
                         </div>
                         <div class="settings-row-2 row">
-                            <span class="row-title">Lampeggia verso fine DOT</span>
+                            <span class="row-title">Lampeggia quando quasi terminato</span>
                             <input id="codex-danger" type="checkbox"/>
                         </div>
                         <div class="settings-row-2 row">
@@ -56,11 +56,15 @@
                     </div>
                 </div>
 
-                <div class="settings-collapse"><span class="settings-collapse-button" id="buffs-collapse">+</span><span>BUFF del Party</span></div>
+                <div class="settings-collapse"><span class="settings-collapse-button" id="buffs-collapse">+</span><span>PARTY BUFFS</span></div>
                 <div id="buffs-settings" class="settings-category">
                     <div class="settings-row row">
-                        <span class="row-title">Mostra sempre Buff personali (abilitato in automatico per AST)</span>
-                        <input id="codex-force-ast" type="checkbox"/>
+                        <span class="row-title">Mostra sempre tutti i buff dei membri del party (Abilitato per default su AST)</span>
+                        <input id="codex-all-personals" type="checkbox"/>
+                    </div>
+                    <div class="settings-row row">
+                        <span class="row-title">Mostra i Miei Buff</span>
+                        <input id="codex-own-personals" type="checkbox"/>
                     </div>
                 </div>
             </div>
