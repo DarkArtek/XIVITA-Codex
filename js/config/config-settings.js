@@ -31,8 +31,14 @@ document.getElementById("codex-refresh").addEventListener("change", function(e){
 document.getElementById("codex-danger").addEventListener("change", function(e){
     config.danger = e.target.checked;
 });
-document.getElementById("codex-force-ast").addEventListener("change", function(e){
-    config.force_ast = e.target.checked;
+document.getElementById("codex-glow").addEventListener("change", function(e){
+    config.glow = e.target.checked;
+});
+document.getElementById("codex-all-personals").addEventListener("change", function(e){
+    config.all_personals = e.target.checked;
+});
+document.getElementById("codex-own-personals").addEventListener("change", function(e){
+    config.own_personals = e.target.checked;
 });
 
 // MISC
@@ -41,6 +47,15 @@ function colorOptions(color) {
     return colors.map(function(c){
         var selected = (c === color)? "selected" : "";
         return `<option value='${c}' ${selected}>${c}</option>`;
+    }).join("");
+}
+
+function glowsOptions(glow) {
+    var glowSelected = glow ? glow : "noGlow";
+    var glows = ["noGlow", "green", "blue", "yellow", "orange", "purple", "red", "dark", "dark2", "rock", "blue2", "fire", "sonic", "swirl", "water", "jewel", "prism", "fireblue", "fireblue2", "rainbow"];
+    return glows.map(function(g) {
+        var selected = (g === glowSelected) ? "selected" : "";
+        return `<option value='${g}' ${selected}>${g}</option>`;
     }).join("");
 }
 
@@ -61,7 +76,9 @@ function getSettings() {
     document.getElementById("codex-timeout").value = config.timeout;
     document.getElementById("codex-refresh").value = config.refresh;
     document.getElementById("codex-danger").checked = config.danger;
-    document.getElementById("codex-force-ast").checked = config.force_ast;
+    document.getElementById("codex-glow").checked = config.glow;
+    document.getElementById("codex-all-personals").checked = config.all_personals;
+    document.getElementById("codex-own-personals").checked = config.own_personals;
 
     // SETUP JOB ITEMS
     for(job in actions) {
@@ -70,12 +87,20 @@ function getSettings() {
         var gaugeCheckboxes = `<span><img class='job-icon' src='img/job_icons/${job}.png'>${job}</span>`;
         for(buffId in actions[job].buffs) {
             var checked = config.disabled[buffId] ? "" : "checked";
+
             var color = config.color[buffId] ? config.color[buffId] : actions[job].buffs[buffId].visual.color;
             var color_select = `<select class='codex-color' data-id='${buffId}'>${colorOptions(color)}</select>`;
+
             var order = config.order[buffId] ? config.order[buffId] : actions[job].buffs[buffId].order;
+
+            var glows = config.glows[buffId] ? config.glows[buffId] : actions[job].buffs[buffId].visual.glow;
+            var glows_select_1 = `<select class='codex-glows' data-id='${buffId}'>${glowsOptions(glows)}</select>`;
+            var glows_select = (actions[job].buffs[buffId].visual.type === "BAR") ? glows_select_1 : "";
+
             gaugeCheckboxes += 
                 `<div class='settings-row-2 row'><span class='row-title'>${actions[job].buffs[buffId].name}</span>` + 
-                `<span>Order</span><input class='codex-order' data-id='${buffId}' value='${order}'/>` +
+                glows_select + 
+                `<input class='codex-order' data-id='${buffId}' value='${order}'/>` +
                 color_select + 
                 `<input class='codex-disabled' data-id='${buffId}' type='checkbox' ${checked}/>` + 
                 "</div>";
@@ -98,20 +123,28 @@ function getSettings() {
             config.order[e.target.getAttribute("data-id")] = e.target.value;
         });
     });
+    document.querySelectorAll(".codex-glows").forEach(function(item) {
+        item.addEventListener("change", function(e) {
+            config.glows[e.target.getAttribute("data-id")] = e.target.value;
+        });
+    });
 
     // SETUP BUFF ITEMS
     var buffSettingsRow = document.createElement("div");
     buffSettingsRow.classList.add("settings-row");
     var buffCheckboxes = `<span>PARTY BUFFS</span>`;
-    for(buffId in buffs) {
-        var checked = config.buffs_disabled[buffId] ? "" : "checked";
-        var selfTag = buffs[buffId].self ? "<span class='tag tag-green'>SELF</span>": "";
-        var targetTag = buffs[buffId].target ? "<span class='tag tag-red'>TARGET</span>": "";
-        var partyTag = buffs[buffId].party ? "<span class='tag tag-yellow'>MEMBRO DEL PARTY</span>": "";
-        buffCheckboxes += 
-            `<div class='settings-row-2 row'><span class='row-title'>${buffs[buffId].name}${selfTag}${targetTag}${partyTag}</span>` +
-            `<input class='codex-buffs-disabled' data-id='${buffId}' type='checkbox' ${checked}/>` +
-            "</div>";
+    for(jobId in buffs) {
+        for(buffId in buffs[jobId]) {
+            var buff = buffs[jobId][buffId];
+            var checked = config.buffs_disabled[buffId] ? "" : "checked";
+            var selfTag = buff.self ? "<span class='tag tag-green'>SELF</span>": "";
+            var targetTag = buff.target ? "<span class='tag tag-red'>TARGET</span>": "";
+            var partyTag = buff.party ? "<span class='tag tag-yellow'>MEMBRO PT</span>": "";
+            buffCheckboxes += 
+                `<div class='settings-row-2 row'><span class='row-title'>${buff.name}${selfTag}${targetTag}${partyTag}</span>` +
+                `<input class='codex-buffs-disabled' data-id='${buffId}' type='checkbox' ${checked}/>` +
+                "</div>";
+        }
     }
     buffSettingsRow.innerHTML = buffCheckboxes;
     document.getElementById("buffs-settings").appendChild(buffSettingsRow);
