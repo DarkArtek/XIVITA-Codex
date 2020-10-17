@@ -4,8 +4,8 @@ Gauges extra e tracker di Buff per FFXIV
 ### Installazione
 1. ACT & Plugin per FFXIV
 2. [OverlayPlugin di NGLD](https://github.com/quisquous/cactbot#install-ngld-overlayplugin)
-3. Per le gauges, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://darkartek.github.io/Codex/index.html`
-4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://darkartek.github.io/Codex/buffs.html`
+3. Per le gauges, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://codex.ffxivita.it/index.html`
+4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://codex.ffxivita.it/buffs.html`
 
 ### Installazione per Streamers
 1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://codex.ffxivita.it?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://codex.ffxivita.it/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
