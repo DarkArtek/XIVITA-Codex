@@ -51,6 +51,9 @@ body {
 #settings-apply:hover {
     background-color: #19a5a5;
 }
+#settings-feature {
+    background-color: #25ff17;
+}
 #settings-body {
     width: 100%;
     flex: 1;
