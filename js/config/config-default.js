@@ -13,7 +13,7 @@ var config = {
     glow: true,
     glows: {},
     // BUFFS
-    all_personals: true,
+    all_personals: false,
     own_personals: true,
     buffs_disabled: {},
 

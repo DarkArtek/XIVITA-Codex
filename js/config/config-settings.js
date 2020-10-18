@@ -139,8 +139,8 @@ function getSettings() {
             var checked = config.buffs_disabled[buffId] ? "" : "checked";
             var selfTag = buff.self ? "<span class='tag tag-green'>SELF</span>": "";
             var targetTag = buff.target ? "<span class='tag tag-red'>TARGET</span>": "";
-            var partyTag = buff.party ? "<span class='tag tag-yellow'>MEMBRO PT</span>": "";
-            buffCheckboxes += 
+            var partyTag = buff.party ? "<span class='tag tag-yellow'>MEMBRO PARTY</span>": "";
+            buffCheckboxes +=
                 `<div class='settings-row-2 row'><span class='row-title'>${buff.name}${selfTag}${targetTag}${partyTag}</span>` +
                 `<input class='codex-buffs-disabled' data-id='${buffId}' type='checkbox' ${checked}/>` +
                 "</div>";

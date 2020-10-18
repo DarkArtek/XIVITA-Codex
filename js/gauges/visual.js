@@ -12,10 +12,11 @@ function setJobUI(job) {
     for(var b = 0; b < buffIds.length; b++) {
         var buff = user.getBuff(buffIds[b].id);
         var row = document.createElement("div");
-        var silver = (config.edges === "silver") ? "<img class='silver-edge' src='img/general/silver_gauge.png'/>" : "";
+        var silver = (config.edges === "silver") ? "<img class='silver-edge' src='/img/general/silver_gauge.png' />" : "";
         var visual = buff.data.visual;
         visual.color = config.color[buff.id] ? config.color[buff.id] : visual.color;
-        
+        visual.glow = config.glows[buff.id] ? config.glows[buff.id] : visual.glow;
+
         row.setAttribute("class","row");
         row.setAttribute("id", buff.id);
         row.setAttribute("type", buff.type);
@@ -26,12 +27,14 @@ function setJobUI(job) {
             row.classList.add("hideOverride");
         }
         if(visual.type === "BAR") {
-            row.innerHTML = "<div class='bar'>" + 
-                            silver + 
+            var glow = (config.glow && visual.glow && visual.glow !== "noGlow") ? `<div class='glow glow-${visual.glow}'><div><span class='tex'></span></div></div>` : "";
+            row.innerHTML = `<div class='bar'>` +
+                            glow +
+                            silver +
                             `<div class='progress-bar progress-bar-${visual.color} edges-${config.edges}'>` +
                             "<span style='width:0%'></span>" +
-                            "</div>" + 
-                            "<div class='data-row'>" + 
+                            "</div>" +
+                            "<div class='data-row'>" +
                             "<span class='data-text'>0</span><span class='flex-1'></span>" +
                             "</div></div></div>";
         }
@@ -81,11 +84,25 @@ function setCountUI(buffId, count) {
     }
 }
 
+function addGlow(buffId) {
+    var g = document.querySelector(".row[id='" + buffId + "'] .glow");
+    if(g) {
+        g.classList.add("glow-active");
+    }
+}
+function removeGlow(buffId) {
+    var g = document.querySelector(".row[id='" + buffId + "'] .glow");
+    if(g) {
+        g.classList.remove("glow-active");
+    }
+}
+
 function clearDanger() {
     document.querySelectorAll(".data-text").forEach(function(elem) {
         elem.classList.remove("data-text-flash");
     });
 }
+
 function hide(buffId) {
     document.querySelector(".row[id='" + buffId + "']").classList.add("hide");
 }

@@ -19,7 +19,9 @@ function logData(line){
             gainBuff(line[5], line[2], parseFloat(line[4]), line[3]);
             break;
         case "30":
-            loseBuff(line[5], line[2], line[3]);
+            if(!user.exploreZone()) {
+                loseBuff(line[5], line[2], line[3]);
+            }
             break;
         case "31":
             parseJob(line[2], line[3]);
@@ -92,6 +94,18 @@ function gainBuff(sourceId, buffId, buffTime, buffName){
                             }
                         }
                     }, REFRESH);
+                    break;
+            }
+
+            if(user.exploreZone()) {
+                user.resetTimer(buffId);
+                user.timers[buffId] = setTimeout(function() {
+                    loseBuff(sourceId, buffId, buffName);
+                }, 1000 * parseFloat(buffTime));
+            }
+
+            if(config.glow) {
+                addGlow(buffId);
             }
             if(buff.data.hides) { // buff hides another bar
                 hide(buff.data.hides);
@@ -123,6 +137,9 @@ function loseBuff(sourceId, buffId, buffName){
                 setTimeout(function() {
                     setCountUI(buffId, 0);
                 }, TIMEOUT)
+                if(config.glow) {
+                    removeGlow(buffId);
+                }
             }
             if(user.hasAlias(buffId)) {
                 loseBuff(sourceId, user.getAlias(buffId), buffName);
@@ -160,6 +177,7 @@ addOverlayListener('ChangePrimaryPlayer', (data) => {
     if(user.id !== "" && (data.charID).toString(16).toUpperCase() !== user.id) { location.reload(); }
 });
 addOverlayListener('ChangeZone', (data) => {
+    console.log(data);
     if(!user.setZone(data.zoneID)){
         reload();
     }

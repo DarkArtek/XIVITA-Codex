@@ -20,7 +20,7 @@ var actions = {
                 ids: [
                     ia.HardSlash, ia.SiphonStrike, ia.Souleater, ia.Unmend, ia.Unleash, ia.StalwartSoul, ia.BloodSpiller, ia.Quietus
                 ],
-                visual: {type: "BAR", color: "blue"}
+                visual: {type: "BAR", color: "blue", glow: "dark"}
             }
         },
         alias: {}
@@ -28,7 +28,7 @@ var actions = {
     WAR: {
         buffs: {
             [ib.InnerRelease]: {
-                name: "Inner Release", 
+                name: "Inner Release",
                 order: 0, time: 10, max: 5,
                 type: "gcds",
                 ids: [
@@ -48,7 +48,7 @@ var actions = {
     PLD: {
         buffs: {
             [ib.Requiescat]: {
-                name: "Requiescat", 
+                name: "Requiescat",
                 order: 0, time: 12, max: 5,
                 type: "gcds",
                 ids: [
@@ -57,13 +57,13 @@ var actions = {
                 visual: {type: "ARROW", color: "blue"}
             },
             [ib.FightOrFlight]: {
-                name: "Fight or Flight", 
+                name: "Fight or Flight",
                 order: 2, time: 25, max: 11,
                 type: "gcds",
                 ids: [
                     ia.FastBlade, ia.RiotBlade, ia.RoyalAuthority, ia.Atonement, ia.GoringBlade, ia.TotalEclipse, ia.Prominence
                 ],
-                visual: {type: "BAR", color: "red"}
+                visual: {type: "BAR", color: "red", glow: "red"}
             },
             [ib.GoringBlade]: {
                 name: "Goring Blade", order: 1,
@@ -77,7 +77,7 @@ var actions = {
     GNB: {
         buffs: {
             [ib.NoMercy]: {
-                name: "No Mercy", 
+                name: "No Mercy",
                 order: 0, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -95,7 +95,7 @@ var actions = {
     SCH: {
         buffs: {
             [ib.Biolysis]: {
-                name: "Biolysis", 
+                name: "Biolysis",
                 order: 0, max: 30,
                 type: "timer",
                 visual: {type: "BAR", color: "green", danger: true}
@@ -109,7 +109,7 @@ var actions = {
     WHM: {
         buffs: {
             [ib.Dia]: {
-                name: "Dia", 
+                name: "Dia",
                 order: 0, max: 30,
                 type: "timer",
                 visual: {type: "BAR", color: "blue", danger: true}
@@ -123,7 +123,7 @@ var actions = {
     AST: {
         buffs: {
             [ib.Combust3]: {
-                name: "Combust", 
+                name: "Combust",
                 order: 0, max: 30,
                 type: "timer",
                 visual: {type: "BAR", color: "blue", danger: true}
@@ -140,7 +140,7 @@ var actions = {
     MNK: {
         buffs: {
             [ib.PerfectBalance]: {
-                name: "Perfect Balance", 
+                name: "Perfect Balance",
                 order: 0, time: 10, max: 5,
                 type: "gcds",
                 ids: [
@@ -150,14 +150,14 @@ var actions = {
                 visual: {type: "ARROW", color: "yellow"}
             },
             [ib.RiddleOfFire]: {
-                name: "Riddle of Fire", 
+                name: "Riddle of Fire",
                 order: 2, time: 20, max: 9,
                 type: "gcds",
                 ids: [
                     ia.Bootshine, ia.TrueStrike, ia.SnapPunch, ia.DragonKick, ia.TwinSnakes, ia.Demolish,
                     ia.ArmOfTheDestroyer, ia.FourPointFury, ia.RockBreaker
                 ],
-                visual: {type: "BAR", color: "red"}
+                visual: {type: "BAR", color: "red", glow: "red"}
             }
         },
         alias: {}
@@ -165,7 +165,7 @@ var actions = {
     DRG: {
         buffs: {
             [ib.LanceCharge]: {
-                name: "Lance Charge", 
+                name: "Lance Charge",
                 order: 0, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -175,14 +175,14 @@ var actions = {
                 visual: {type: "ARROW", color: "red", size: "m"}
             },
             [ib.RightEye]: {
-                name: "Right Eye", 
+                name: "Right Eye",
                 order: 2, time: 20, max: 9,
                 type: "gcds",
                 ids: [
                     ia.TrueThrust, ia.Disembowel, ia.ChaosThrust, ia.WheelingThrust, ia.VorpalThrust, ia.FullThrust,
                     ia.FangAndClaw, ia.RaidenThrust, ia.DoomSpike, ia.SonicThrust, ia.CoerthanTorment, ia.PiercingTalon
                 ],
-                visual: {type: "BAR", color: "orange"}
+                visual: {type: "BAR", color: "orange", glow: "orange"}
             }
         },
         alias: {
@@ -192,7 +192,7 @@ var actions = {
     NIN: {
         buffs: {
             [ib.TrickAttack]: {
-                name: "Trick Attack", 
+                name: "Trick Attack",
                 order: 0, time: 15, max: 7,
                 type: "gcds",
                 ids: [
@@ -207,19 +207,19 @@ var actions = {
     SAM: {
         buffs: {
             [ib.Jinpu]: {
-                name: "Jinpu", 
+                name: "Jinpu",
                 order: 0, max: 40,
                 type: "timer",
                 visual: {type: "BAR", color: "blue", danger: true}
             },
             [ib.Shifu]: {
-                name: "Shifu", 
+                name: "Shifu",
                 order: 1, max: 40,
                 type: "timer",
                 visual: {type: "BAR", color: "red", danger: true}
             },
             [ib.Higanbana]: {
-                name: "Higanbana", 
+                name: "Higanbana",
                 order: 2, max: 60,
                 type: "timer",
                 visual: {type: "BAR", color: "orange", danger: true}
@@ -233,19 +233,19 @@ var actions = {
     BRD: {
         buffs: {
             [ib.CausticBite]: {
-                name: "Caustic Bite", 
+                name: "Caustic Bite",
                 order: 0, max: 30,
                 type: "timer",
                 visual: {type: "BAR", color: "red", danger: true}
             },
             [ib.Stormbite]: {
-                name: "Stormbite", 
+                name: "Stormbite",
                 order: 1, max: 30,
                 type: "timer",
                 visual: {type: "BAR", color: "blue", danger: true}
             },
             [ib.RagingStrikes]: {
-                name: "Raging Strikes", 
+                name: "Raging Strikes",
                 order: 2, time: 20, max: 9, // +2 for barrage?
                 type: "gcds",
                 ids: [
@@ -262,7 +262,7 @@ var actions = {
     MCH: {
         buffs: {
             [ia.Hypercharge]: {
-                name: "Hypercharge", 
+                name: "Hypercharge",
                 order: 0, time: 9, max: 5,
                 combo: true,
                 type: "gcds",
@@ -272,14 +272,14 @@ var actions = {
                 visual: {type: "ARROW", color: "orange"}
             },
             [ib.Wildfire]: {
-                name: "Wildfire", 
+                name: "Wildfire",
                 order: 1, time: 10, max: 6,
                 type: "gcds",
                 ids: [
                     ia.HeatedSplitShot, ia.HeatedSlugShot, ia.HeatedCleanShot, ia.AirAnchor, ia.Drill, ia.BioBlaster, ia.HeatBlast, ia.AutoCrossbow,
                     ia.HotShot, ia.CleanShot
                 ],
-                visual: {type: "BAR", color: "red"}
+                visual: {type: "BAR", color: "red", glow: "red"}
             }
         },
         alias: {}
@@ -287,7 +287,7 @@ var actions = {
     DNC: {
         buffs: {
             [ib.Devilment]: {
-                name: "Devilment", 
+                name: "Devilment",
                 order: 0, time: 20, max: 10,
                 type: "gcds",
                 ids: [
@@ -296,7 +296,7 @@ var actions = {
                     ia.StandardStep, ia.DoubleStandardFinish, ia.TechnicalStep, ia.QuadTechnicalFinish,
                     ia.Emboite, ia.Entrechat, ia.Jete, ia.Pirouette, ia.SaberDance,
                 ],
-                visual: {type: "BAR", color: "red"}
+                visual: {type: "BAR", color: "red", glow: "red"}
             },
         },
         alias: {}
