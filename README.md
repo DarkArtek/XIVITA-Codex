@@ -8,7 +8,7 @@ Gauges extra e tracker di Buff per FFXIV
 4. Per i buff, aggiungere un nuovo overlay di Miniparse e puntare l'url a `https://codex.ffxivita.it/buffs.html`
 
 ### Installazione per Streamers
-1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://codex.ffxivita.it?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://codex.ffxivita.it/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
+1. Dentro OBS, aggiungere una nuova sorgente web e fatela puntare a `https://codex.ffxivita.it/index.html?OVERLAY_WS=ws://127.0.0.1:10501/ws` oppure `https://codex.ffxivita.it/buffs.html?OVERLAY_WS=ws://127.0.0.1:10501/ws`
 
 ### Le Gauges
 Mostra diverse informazioni. Ad esempio quanto tempo rimane al vostro DoT (Biolysis, Dia, etc.) o quanti GCD avete (Inner Release, Perfect Balance, etc.)
@@ -35,11 +35,11 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 
 #### <img src="img/job_icons/DRK.png" height="20px" width="20px"> DRK
 + **Gauges**: Delirium, Blood Weapon
-+ **Buffs**: Delerium (visibile solo ad AST di default)
++ **Buffs**: Delerium (visibile solo agli AST di default)
 
 #### <img src="img/job_icons/WAR.png" height="20px" width="20px"> WAR
 + **Gauges**: Inner Release, Storm's Eye
-+ **Buffs**: Inner Release (visibile solo ad AST di default)
++ **Buffs**: Inner Release (visibile solo agli AST di default)
 
 #### <img src="img/job_icons/PLD.png" height="20px" width="20px"> PLD
 + **Gauges**: Requiescat, Fight or Flight, Goring Blade
@@ -76,11 +76,11 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 
 ### <img src="img/job_icons/BRD.png" height="20px" width="20px"> BRD
 + **Gauges**: Raging Strikes, Caustic Bite, Stormbite
-+ **Buffs**: Battle Voice, Raging Strikes (visibile solo ad AST di default)
++ **Buffs**: Battle Voice, Raging Strikes (visibile solo agli AST di default)
 
 ### <img src="img/job_icons/MCH.png" height="20px" width="20px"> MCH
 + **Gauges**: Hypercharge, Wildfire
-+ **Buffs**: Wildfire (visibile solo ad AST di default)
++ **Buffs**: Wildfire (visibile solo agli AST di default)
 
 ### <img src="img/job_icons/DNC.png" height="20px" width="20px"> DNC
 + **Gauges**: Devilment
@@ -91,14 +91,25 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 
 ### <img src="img/job_icons/SMN.png" height="20px" width="20px"> SMN
 + **Gauges**: Bio, Miasma, Wyrmwave & Scarlet Flame
-+ **Buffs**: Devotion, Summon Bahamut (visibile solo ad AST di default), Firebird Trance (visibile solo ad AST di default)
++ **Buffs**: Devotion, Summon Bahamut (visibile solo agli AST di default), Firebird Trance (visibile solo ad AST di default)
 
 ### <img src="img/job_icons/RDM.png" height="20px" width="20px"> RDM
 + **Gauges**: Manification
-+ **Buffs**: Embolden, Manafication (visibile solo ad AST di default)
++ **Buffs**: Embolden, Manafication (visibile solo agli AST di default)
 
 ### <img src="img/job_icons/BLU.png" height="20px" width="20px"> BLU
 + **Gauges**: Song of Torment
 + **Buffs**: Off-guard, Peculiar Light
 + **TODO:** Indicatore Revenge blast
 
+## ToDo
+- TODO: cambio dimensione buff
+- TODO: glows sulle frecce
+- TODO: multi-DoT tracker
+- TODO: multi-buffs (se avete più job uguali in pt)
+- TODO: cambio stile barra
+- TODO: cambio dimensione puntatore
+- TODO: material UI o base FFXIV
+- TODO: aggiungere impostazioni Buff (dimensione, etc.)
+- TODO: fermare lampeggio dopo tot (se abilitato)
+- TODO: bottone di Reset
