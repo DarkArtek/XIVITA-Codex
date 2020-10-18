@@ -1,6 +1,8 @@
 name: Refresh
 
 on:
+  push:
+    branches: [master]
   schedule:
      - cron: '0 0 * * *' #ogni giorno a mezzanotte
 
