@@ -1,71 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <link rel="stylesheet" href="css/config/config.css"/>
-        <title>Codex &bull; Impostazioni</title>
     </head>
     <body>
         <div id="settings-panel">
             <div id="settings-header">
-                <span id="settings-title">IMPOSTAZIONI</span>
-                <span id="settings-help" class="btn"><a href="https://github.com/DarkArtek/Codex/issues/new?assignees=DarkArtek&labels=bug&template=segnalazione-bug.md&title=%5BBUG%5D" target="_blank">SEGNALA BUG</a></span>
-                <span id="settings-feature" class="btn"><a href="https://github.com/DarkArtek/Codex/issues/new?assignees=DarkArtek&labels=enhancement&template=richiedi-feature.md&title=%5BFEAT%5D" target="_blank">RICHIEDI FEATURE</a> </span>
-                <span id="settings-apply" class="btn">SALVA</span>
+                <span id="settings-title">Codex &bull: IMPOSTAZIONI</span>
+                <span id="settings-help" class="btn"><a href="https://github.com/DarkArtek/Codex/issues/new" target="_blank">SEGNALA BUG</a></span>
+                <span id="settings-apply" class="btn">SAVE</span>
             </div>
             <div id="settings-body">
-                <div class="settings-collapse"><span class="settings-collapse-button" id="job-gauges-collapse">+</span><span>JOB GAUGES</span></div>
+                <div class="settings-collapse"><span class="settings-collapse-button" id="job-gauges-collapse">+</span><span>GAUGES dei JOB</span></div>
                 <div id="gauge-settings" class="settings-category">
                     <div class="settings-row rows">
                         <div class="settings-row-2 settings-row-2-header row">
                             <span class="row-title">Bordi</span>
                             <select id="codex-edges">
                                 <option value="round" selected>Arrotondati</option>
-                                <option value="corners">Default</option>
+                                <option value="corners">Normali</option>
                                 <option value="silver">Argentati</option>
                             </select>
                         </div>
                         <div class="settings-row-2 settings-row-2-header row">
-                            <span class="row-title">Zoom</span>
+                            <span class="row-title">Scaling</span>
                             <input id="codex-zoom"/>
                         </div>
                         <div class="settings-row-2 settings-row-2-header row">
                             <span class="row-title">Dimensione Font</span>
                             <input id="codex-fontsize"/>
                         </div>
+                        <div class="settings-row-2 settings-row-2-header row">
+                            <span class="row-title">Allinea a Destra</span>
+                            <input id="codex-justify-right" type="checkbox"/>
+                        </div>
+                        <div class="settings-row-2 settings-row-2-header row">
+                            <span class="row-title">Gauges Orizzontali</span>
+                            <input id="codex-horizontal-gauges" type="checkbox"/>
+                        </div>
                     </div>
 
                     <div class="settings-row rows">
                         <div class="settings-row-2 settings-row-2-header row">
-                            <span class="row-title">Resta visible dopo la fine del DOT (in millisecondi)</span>
+                            <span class="row-title">Viosibilit&agrave; dopo la fine (millisecondi)</span>
                             <input id="codex-timeout"/>
                         </div>
                         <div class="settings-row-2 settings-row-2-header row">
-                            <span class="row-title">Refresh (in millisecondi)</span>
+                            <span class="row-title">Refresh del Timer (millisecondi)</span>
                             <input id="codex-refresh"/>
                         </div>
                         <div class="settings-row-2 settings-row-2-header row">
-                            <span class="row-title">Lampeggia verso fine DOT</span>
+                            <span class="row-title">Lampeggia quando i DOT sono vicini alla fine</span>
                             <input id="codex-danger" type="checkbox"/>
                         </div>
                         <div class="settings-row-2 settings-row-2-header row">
-                            <span class="row-title">Glow</span>
+                            <span class="row-title">Bagliore attorno alle barre</span>
                             <input id="codex-glow" type="checkbox"/>
                         </div>
                     </div>
 
                     <div class="settings-row row">
-                        <span class="row-title">Job</span>
+                        <span class="row-title">Jobs</span>
                     </div>
                 </div>
 
-                <div class="settings-collapse"><span class="settings-collapse-button" id="buffs-collapse">+</span><span>BUFF del PARTY</span></div>
+                <div class="settings-collapse"><span class="settings-collapse-button" id="buffs-collapse">+</span><span>PARTY BUFFS</span></div>
                 <div id="buffs-settings" class="settings-category">
                     <div class="settings-row row">
-                        <span class="row-title">Mostra sempre tutti i buff del party (attivi per default su AST)</span>
+                        <span class="row-title">Mostra sempre tutti i buff dei membri del party (abilitato di default per gli AST)</span>
                         <input id="codex-all-personals" type="checkbox"/>
                     </div>
                     <div class="settings-row row">
-                        <span class="row-title">Mostra i tuoi buff personali</span>
+                        <span class="row-title">Mostra buff personali</span>
                         <input id="codex-own-personals" type="checkbox"/>
                     </div>
                 </div>
@@ -75,6 +81,7 @@
     <script src="js/general/ids.js"></script>
     <script src="js/gauges/actions.js"></script>
     <script src="js/buffs/buffs.js"></script>
+
     <script src="js/config/config-default.js"></script>
     <script src="js/config/config-settings.js"></script>
 </html>
