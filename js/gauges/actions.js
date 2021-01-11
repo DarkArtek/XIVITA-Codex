@@ -28,7 +28,7 @@ var actions = {
     WAR: {
         buffs: {
             [ib.InnerRelease]: {
-                name: "Inner Release",
+                name: "Inner Release", 
                 order: 0, time: 10, max: 5,
                 type: "gcds",
                 ids: [
@@ -40,7 +40,7 @@ var actions = {
                 name: "Storms Eye", order: 1,
                 max: 60,
                 type: "timer",
-                visual: {type: "BAR", color: "red", danger: true}
+                visual: {type: "BAR", icon: "stormseye", color: "red", danger: true}
             }
         },
         alias: {}
@@ -48,7 +48,7 @@ var actions = {
     PLD: {
         buffs: {
             [ib.Requiescat]: {
-                name: "Requiescat",
+                name: "Requiescat", 
                 order: 0, time: 12, max: 5,
                 type: "gcds",
                 ids: [
@@ -57,7 +57,7 @@ var actions = {
                 visual: {type: "ARROW", color: "blue"}
             },
             [ib.FightOrFlight]: {
-                name: "Fight or Flight",
+                name: "Fight or Flight", 
                 order: 2, time: 25, max: 11,
                 type: "gcds",
                 ids: [
@@ -69,7 +69,7 @@ var actions = {
                 name: "Goring Blade", order: 1,
                 max: 21,
                 type: "timer",
-                visual: {type: "BAR", color: "orange", danger: true}
+                visual: {type: "BAR", icon: "goringblade", color: "orange", danger: true}
             }
         },
         alias: {}
@@ -77,7 +77,7 @@ var actions = {
     GNB: {
         buffs: {
             [ib.NoMercy]: {
-                name: "No Mercy",
+                name: "No Mercy", 
                 order: 0, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -95,10 +95,10 @@ var actions = {
     SCH: {
         buffs: {
             [ib.Biolysis]: {
-                name: "Biolysis",
+                name: "Biolysis", 
                 order: 0, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "green", danger: true}
+                visual: {type: "BAR", icon: "biolysis", color: "green", danger: true}
             }
         },
         alias: {
@@ -109,10 +109,10 @@ var actions = {
     WHM: {
         buffs: {
             [ib.Dia]: {
-                name: "Dia",
+                name: "Dia", 
                 order: 0, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true}
+                visual: {type: "BAR", icon: "dia", color: "blue", danger: true}
             }
         },
         alias: {
@@ -123,10 +123,10 @@ var actions = {
     AST: {
         buffs: {
             [ib.Combust3]: {
-                name: "Combust",
+                name: "Combust", 
                 order: 0, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true}
+                visual: {type: "BAR", icon: "combust", color: "blue", danger: true}
             }
         },
         alias: {
@@ -140,7 +140,7 @@ var actions = {
     MNK: {
         buffs: {
             [ib.PerfectBalance]: {
-                name: "Perfect Balance",
+                name: "Perfect Balance", 
                 order: 0, time: 10, max: 5,
                 type: "gcds",
                 ids: [
@@ -150,7 +150,7 @@ var actions = {
                 visual: {type: "ARROW", color: "yellow"}
             },
             [ib.RiddleOfFire]: {
-                name: "Riddle of Fire",
+                name: "Riddle of Fire", 
                 order: 2, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -165,7 +165,7 @@ var actions = {
     DRG: {
         buffs: {
             [ib.LanceCharge]: {
-                name: "Lance Charge",
+                name: "Lance Charge", 
                 order: 0, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -175,7 +175,7 @@ var actions = {
                 visual: {type: "ARROW", color: "red", size: "m"}
             },
             [ib.RightEye]: {
-                name: "Right Eye",
+                name: "Right Eye", 
                 order: 2, time: 20, max: 9,
                 type: "gcds",
                 ids: [
@@ -192,7 +192,7 @@ var actions = {
     NIN: {
         buffs: {
             [ib.TrickAttack]: {
-                name: "Trick Attack",
+                name: "Trick Attack", 
                 order: 0, time: 15, max: 7,
                 type: "gcds",
                 ids: [
@@ -207,22 +207,22 @@ var actions = {
     SAM: {
         buffs: {
             [ib.Jinpu]: {
-                name: "Jinpu",
+                name: "Jinpu", 
                 order: 0, max: 40,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true}
+                visual: {type: "BAR", icon: "jinpu", color: "blue", danger: true}
             },
             [ib.Shifu]: {
-                name: "Shifu",
+                name: "Shifu", 
                 order: 1, max: 40,
                 type: "timer",
-                visual: {type: "BAR", color: "red", danger: true}
+                visual: {type: "BAR", icon: "shifu", color: "red", danger: true}
             },
             [ib.Higanbana]: {
-                name: "Higanbana",
+                name: "Higanbana", 
                 order: 2, max: 60,
                 type: "timer",
-                visual: {type: "BAR", color: "orange", danger: true}
+                visual: {type: "BAR", icon: "higanbana", color: "orange", danger: true}
             }
         },
         alias: {}
@@ -233,19 +233,19 @@ var actions = {
     BRD: {
         buffs: {
             [ib.CausticBite]: {
-                name: "Caustic Bite",
+                name: "Caustic Bite", 
                 order: 0, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "red", danger: true}
+                visual: {type: "BAR", icon: "causticbite", color: "red", danger: true}
             },
             [ib.Stormbite]: {
-                name: "Stormbite",
+                name: "Stormbite", 
                 order: 1, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true}
+                visual: {type: "BAR", icon: "stormbite", color: "blue", danger: true}
             },
             [ib.RagingStrikes]: {
-                name: "Raging Strikes",
+                name: "Raging Strikes", 
                 order: 2, time: 20, max: 9, // +2 for barrage?
                 type: "gcds",
                 ids: [
@@ -262,7 +262,7 @@ var actions = {
     MCH: {
         buffs: {
             [ia.Hypercharge]: {
-                name: "Hypercharge",
+                name: "Hypercharge", 
                 order: 0, time: 9, max: 5,
                 combo: true,
                 type: "gcds",
@@ -272,7 +272,7 @@ var actions = {
                 visual: {type: "ARROW", color: "orange"}
             },
             [ib.Wildfire]: {
-                name: "Wildfire",
+                name: "Wildfire", 
                 order: 1, time: 10, max: 6,
                 type: "gcds",
                 ids: [
@@ -287,7 +287,7 @@ var actions = {
     DNC: {
         buffs: {
             [ib.Devilment]: {
-                name: "Devilment",
+                name: "Devilment", 
                 order: 0, time: 20, max: 10,
                 type: "gcds",
                 ids: [
@@ -310,14 +310,14 @@ var actions = {
                 name: "Thunder 3", 
                 order: 0, max: 24,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true},
+                visual: {type: "BAR", icon: "thunder3", color: "blue", danger: true},
                 hides: [ib.Thunder4]
             },
             [ib.Thunder4]: {
                 name: "Thunder 4", 
                 order: 1, max: 18,
                 type: "timer",
-                visual: {type: "BAR", color: "purple", danger: true},
+                visual: {type: "BAR", icon: "thunder4", color: "purple", danger: true},
                 hides: [ib.Thunder3],
                 hidden: true
             }
@@ -352,13 +352,13 @@ var actions = {
                 name: "Bio", 
                 order: 2, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "green", danger: true},
+                visual: {type: "BAR", icon: "bio", color: "green", danger: true},
             },
             [ib.Miasma]: {
                 name: "Miasma", 
                 order: 3, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "blue", danger: true},
+                visual: {type: "BAR", icon: "miasma", color: "blue", danger: true},
             }
         },
         alias: {
@@ -392,7 +392,7 @@ var actions = {
                 name: "Song of Torment", 
                 order: 0, max: 30,
                 type: "timer",
-                visual: {type: "BAR", color: "red", danger: true}
+                visual: {type: "BAR", icon: "songoftorment", color: "red", danger: true}
             }
         },
         alias: {}
