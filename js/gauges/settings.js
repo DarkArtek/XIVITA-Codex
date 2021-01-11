@@ -16,6 +16,15 @@ function getSettings() {
         }
     }
 
+    // ADD CLASSES
+    if(config.justify_right) {
+        document.documentElement.classList.add("justify-right");
+    }
+    if(config.horizontal_gauges) {
+        document.documentElement.classList.add("horizontal-gauges");
+    }
+
+    // ADD STYLE
     var style = document.createElement('style');
     var h = "body{zoom:" + config.zoom + ";}" +
             ".data-text{font-size:" + config.fontSize + "px;}";
