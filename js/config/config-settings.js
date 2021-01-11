@@ -168,7 +168,7 @@ function getSettings() {
     buffSettingsRow.classList.add("settings-row");
     var buffCheckboxes = `<span>BUFF PARTY</span>`;
     for(jobId in buffs) {
-        for(buffId in buffs[jobId]) {g
+        for(buffId in buffs[jobId]) {
             var buff = buffs[jobId][buffId];
             var checked = config.buffs_disabled[buffId] ? "" : "checked";
             var selfTag = buff.self ? "<span class='tag tag-green'>SELF</span>": "";
