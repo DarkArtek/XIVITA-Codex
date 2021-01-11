@@ -166,14 +166,14 @@ function getSettings() {
     // SETUP BUFF ITEMS
     var buffSettingsRow = document.createElement("div");
     buffSettingsRow.classList.add("settings-row");
-    var buffCheckboxes = `<span>PARTY BUFFS</span>`;
+    var buffCheckboxes = `<span>BUFF PARTY</span>`;
     for(jobId in buffs) {
-        for(buffId in buffs[jobId]) {
+        for(buffId in buffs[jobId]) {g
             var buff = buffs[jobId][buffId];
             var checked = config.buffs_disabled[buffId] ? "" : "checked";
-            var selfTag = buff.self ? "<span class='tag tag-green'>ON SELF</span>": "";
-            var targetTag = buff.target ? "<span class='tag tag-red'>ON TARGET</span>": "";
-            var partyTag = buff.party ? "<span class='tag tag-yellow'>ON PARTY MEMBER</span>": "";
+            var selfTag = buff.self ? "<span class='tag tag-green'>SELF</span>": "";
+            var targetTag = buff.target ? "<span class='tag tag-red'>TARGET</span>": "";
+            var partyTag = buff.party ? "<span class='ta tag-yellow'>MEMBRO PARTY</span>": "";
             buffCheckboxes += 
                 `<div class='settings-row-2 settings-row-2-header row'><span class='row-title'>${buff.name}${selfTag}${targetTag}${partyTag}</span>` +
                 `<input class='codex-buffs-disabled' data-id='${buffId}' type='checkbox' ${checked}/>` +
