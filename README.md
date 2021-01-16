@@ -103,13 +103,7 @@ Mostra i vari buff attivi del party e il loro cooldown. Per gli Astrologian, mso
 + **TODO:** Indicatore Revenge blast
 
 ## ToDo
-- TODO: cambio dimensione buff
-- TODO: glows sulle frecce
-- TODO: multi-DoT tracker
-- TODO: multi-buffs (se avete più job uguali in pt)
-- TODO: cambio stile barra
 - TODO: cambio dimensione puntatore
 - TODO: material UI o base FFXIV
 - TODO: aggiungere impostazioni Buff (dimensione, etc.)
 - TODO: fermare lampeggio dopo tot (se abilitato)
-- TODO: bottone di Reset
