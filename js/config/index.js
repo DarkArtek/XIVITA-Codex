@@ -218,9 +218,9 @@ for(const jobId in buffConfig) {
     for(const buffId in buffConfig[jobId]) {
         var buff = buffConfig[jobId][buffId];
         var checked = config.buffs_disabled[buffId] ? '' : 'checked';
-        var selfTag = buff.self ? '<span class="tag tag-green">ON SELF</span>': '';
-        var targetTag = buff.target ? '<span class="tag tag-red">ON TARGET</span>': '';
-        var partyTag = buff.party ? '<span class="tag tag-yellow">ON PARTY MEMBER</span>': '';
+        var selfTag = buff.self ? '<span class="tag tag-green">SELF</span>': '';
+        var targetTag = buff.target ? '<span class="tag tag-red">TARGET</span>': '';
+        var partyTag = buff.party ? '<span class="tag tag-yellow">MEMBRO PARTY</span>': '';
         buffCheckboxes += `
             <div class='settings-row-2 settings-row-2-header row'>
                 <span class='row-title'>${buff.name} ${selfTag} ${targetTag} ${partyTag}</span>
